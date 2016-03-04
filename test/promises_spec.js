@@ -8,15 +8,6 @@ chai.use(chaiAsPromised);
 
 describe('ES2015 Promises', () => {
   it('should provide a greeting', () => {
-    // Given
-    const generateGreeting = (name) => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(`Hello ${name}!`);
-        }, 1500);
-      });
-    };
-
     // When
     const promise = generateGreeting('Sean');
 
@@ -45,4 +36,12 @@ describe('ES2015 Promises', () => {
     // Then
     return expect(promise).to.eventually.rejectedWith(errorMessage);
   });
+
+  const generateGreeting = (name) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`Hello ${name}!`);
+      }, 1500);
+    });
+  };
 });
