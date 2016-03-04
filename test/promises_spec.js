@@ -40,7 +40,7 @@ describe('ES2015 Promises', () => {
     return expect(promises).to.eventually.equal('Hello Sean!');
   });
 
-  it('should use promise.resolve', () => {
+  it('should resolve a promise with a synchronous value', () => {
     // Given
     const message = 'Say Hello!';
 
@@ -51,7 +51,7 @@ describe('ES2015 Promises', () => {
     return expect(promise).to.eventually.equal(message);
   });
 
-  it('should use promise.reject', () => {
+  it('should reject a promise with a message', () => {
     // Given
     const errorMessage = 'Help! Error!';
 
