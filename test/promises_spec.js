@@ -28,6 +28,18 @@ describe('ES2015 Promises', () => {
     return expect(promises).to.eventually.deep.equal(expectedGreetings);
   });
 
+  it('should provide results of first promise', () => {
+    // Given
+    const promise1 = generateGreeting('Sean');
+    const promise2 = generateGreeting('Beth');
+
+    // When
+    const promises = Promise.race([promise1, promise2]);
+
+    // Then®
+    return expect(promises).to.eventually.equal('Hello Sean!');
+  });
+
   it('should use promise.resolve', () => {
     // Given
     const message = 'Say Hello!';
