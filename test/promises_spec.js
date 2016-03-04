@@ -36,7 +36,7 @@ describe('ES2015 Promises', () => {
     // When
     const promises = Promise.race([promise1, promise2]);
 
-    // Then®
+    // Then
     return expect(promises).to.eventually.equal('Hello Sean!');
   });
 
