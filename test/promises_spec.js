@@ -6,8 +6,8 @@ const expect = chai.expect;
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
-describe('Async-Await ', () => {
-  it('should use promise', () => {
+describe('ES2015 Promises', () => {
+  it('should provide a greeting', () => {
     // Given
     const generateGreeting = (name) => {
       return new Promise((resolve) => {
