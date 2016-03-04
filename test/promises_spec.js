@@ -15,6 +15,19 @@ describe('ES2015 Promises', () => {
     return expect(promise).to.eventually.equal('Hello Sean!');
   });
 
+  it('should provide multiple greetings', () => {
+    // Given
+    const promise1 = generateGreeting('Sean');
+    const promise2 = generateGreeting('Beth');
+
+    // When
+    const promises = Promise.all([promise1, promise2]);
+
+    // Then®
+    const expectedGreetings = ['Hello Sean!', 'Hello Beth!'];
+    return expect(promises).to.eventually.deep.equal(expectedGreetings);
+  });
+
   it('should use promise.resolve', () => {
     // Given
     const message = 'Say Hello!';
