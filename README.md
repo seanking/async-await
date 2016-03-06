@@ -78,7 +78,7 @@ it('should handle invalid delay', () => {
   const invalidDelay = 1501;
 
   // When
-  const promise = generateGreeting('Sean', invalidDelay);
+  const promise = generateGreeting('Foo', invalidDelay);
 
   // Then
   return expect(promise).to.eventually.rejectedWith('Invalid delay!');
