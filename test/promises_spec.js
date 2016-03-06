@@ -15,6 +15,17 @@ describe('ES2015 Promises', () => {
     return expect(promise).to.eventually.equal('Hello Sean!');
   });
 
+  it('should handle invalid delay', () => {
+    // Given
+    const invalidDelay = 1501;
+
+    // When
+    const promise = generateGreeting('Sean', invalidDelay);
+
+    // Then
+    return expect(promise).to.eventually.rejectedWith('Invalid delay!');
+  });
+
   it('should provide multiple greetings', () => {
     // Given
     const promise1 = generateGreeting('Sean');
@@ -30,8 +41,9 @@ describe('ES2015 Promises', () => {
 
   it('should provide results of first promise', () => {
     // Given
-    const promise1 = generateGreeting('Sean');
-    const promise2 = generateGreeting('Beth');
+    const delay = 100;
+    const promise1 = generateGreeting('Sean', delay);
+    const promise2 = generateGreeting('Beth', delay + 1000);
 
     // When
     const promises = Promise.race([promise1, promise2]);
@@ -62,11 +74,13 @@ describe('ES2015 Promises', () => {
     return expect(promise).to.eventually.rejectedWith(errorMessage);
   });
 
-  const generateGreeting = (name) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(`Hello ${name}!`);
-      }, 1500);
+  function generateGreeting(name, delay = 1000) {
+    return new Promise((resolve, reject) => {
+      if (delay > 1500) {
+        reject(new Error('Invalid delay!'));
+      }
+
+      setTimeout(() => resolve(`Hello ${name}!`), delay);
     });
-  };
+  }
 });
