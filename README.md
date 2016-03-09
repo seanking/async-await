@@ -3,7 +3,7 @@
 Over the years developers have used multiple libraries to provide support for promises. Each library came with its own tradeoffs and APIs. The tradeoffs and APIs made it hard for developers to transition their projects to a different promise library. However, [ES2015 language specification](http://www.ecma-international.org/ecma-262/6.0/) has introduced Promises as a first-class feature eliminating the need for a promise library.
 
 ## Callbacks
-Promises were designed to improve the readability of callbacks by preventing the [pyramid of doom](http://callbackhell.com). The also to reintroduce the idea of _returns_ and _throws_, instead of the execution path being the result of side effects. 
+Promises were designed to improve the readability of callbacks by preventing the [pyramid of doom](http://callbackhell.com). They also to reintroduce the idea of _returns_ and _throws_, instead of the execution path being the result of side effects.
 
 The following examples is designed to show to complexity involved with callbacks. The _generateGreeting_ method uses _window.setTimeout_ to create an asynchronous operation. The method takes a _name_, _callback_, and _delay_. In the case that an invalid _delay_ was passed to _generateGreeting_, an Error will be passed to the callback. Otherwise, a greeting will be generated and passed to the callback.   
 
@@ -158,5 +158,4 @@ it('should handle invalid delay', () => {
 ES2015 made promises a first-class feature of the language. [Node](https://nodejs.org/en/) and most of the modern browsers support Promises. Unsurprisingly, Internet Explorer still does not provide support for promises even though the Edge browser does support Promises. If IE or legacy browsers need to be supported, a pollyfill or transpiler such as [Babel](https://babeljs.io) can been used to add support for Promises.
 
 ### Code Examples
-
 The code examples can be found on [GitHub](https://github.com/seanking/es2015-promises). Please feel free to fork and improve the project. Thanks.
