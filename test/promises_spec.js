@@ -1,9 +1,9 @@
 'use strict';
 
-const Promise = require('promise');
-const chai = require('chai');
+import * as chai from 'chai';
 const expect = chai.expect;
-const chaiAsPromised = require('chai-as-promised');
+
+import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
 describe('ES2015 Promises', () => {
