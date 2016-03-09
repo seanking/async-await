@@ -33,7 +33,7 @@ generateGreeting('World', callback, 1501); // prints 'Invalid Delay!'
 ```
 
 ## Promises
-A promise is an object that represents an operation that has completed. A promise takes a _resolve_ callback and _reject_ callback as parameters. The _resolve_ callback is called after a successful completion of the asynchronous operation with the results of the operation passed into the callback. The _reject_ callback is called after an error and the error passed into the callback.
+A promise is an object that represents an operation that has completed. The _Promise_ constructor takes a _resolve_ callback and _reject_ callback as parameters. The _resolve_ callback is called after a successful completion of the asynchronous operation with the results of the operation passed into the callback. The _reject_ callback is called after an error and the error passed into the callback.
 
 ### Define Promise
 
