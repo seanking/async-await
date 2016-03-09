@@ -54,7 +54,7 @@ function generateGreeting(name, delay = 1000) {
 ### Fulfilled Promise
 After the asynchronous operation has successfully been completed, the promise's _then_ method will be called with the results of the asynchronous operation.
 
-In the following example, the _generateGreeting_ method is called with 'Foo'. After a delay, the will generate the  greeting 'Hello Foo!' and pass it to the promise's _then_ method.
+In the following example, the _generateGreeting_ method is called with 'Foo'. After a delay, a greeting will generated ('Hello Foo!') and pass it to the promise's _then_ method.
 
 ```javascript
 generateGreeting('Foo')
@@ -64,7 +64,7 @@ generateGreeting('Foo')
 ### Rejected Promise
 A failed asynchronous operation will call the promise's _catch_ with the reason for failure.
 
-In the following example, the _generateGreeting_ method is called an invalid delay. The invalid delay will cause the operation to fail and the promise's _catch_ method be called with a reason 'Invalid Delay!'.
+In the following example, the _generateGreeting_ method is called an invalid delay. The invalid delay will cause the operation to fail and the promise's _catch_ method will be called with a reason 'Invalid Delay!'.
 
 ```javascript
 const invalidDelay = 1501;
@@ -85,7 +85,7 @@ generateGreeting('Foo')  // generates 'Hello Foo!'
 ### Handling Multiple Promises
 _Promise.all(iterable)_ will provide a promise for all the iterable promises. This aggregate of promise will be resolved once all the arguments have been resolved or one of the arguments have been rejected. The resolved promise will be passed an array of results.
 
-In the following example, multiple promises are passed to _Promise.all_. Once all the greeting promises are resolved, the greeting are passed as an array to the promise's _then_ method.
+In the following example, multiple promises are passed to _Promise.all_. Once all the greeting promises are resolved, the greetings are passed as an array to the promise's _then_ method.
 
 ```javascript
 const promise1 = generateGreeting('Foo');
@@ -126,7 +126,7 @@ describe('ES2015 Promises', () => {
 #### Fulfilled Promise
 The test below verifies that the _generateGreeting_ method will return the expected greeting. The test creates a promise and asserts that it will eventually return the greeting 'Hello Foo!'.
 
-It is important to note that the chai assertion returns a promise. This notifies the mocha test framework to wait until the promise under test has resolved or rejected to complete the test.
+It is important to note that the chai assertion returns a promise. This notifies the mocha test framework to wait until the promise under test has been resolved or has been rejected to complete the test.
 
 ```javascript
 it('should provide a greeting', () => {
@@ -139,7 +139,7 @@ it('should provide a greeting', () => {
 ```
 
 #### Rejected Promise
-The test below verifies that the _generateGreeting_ method will return an error for an invalid delay. It is similar the previous test, but it ensures the promise was rejected with the 'Invalid delay!'.
+The test below verifies that the _generateGreeting_ method will throw an error for an invalid delay. It is similar the previous test, but it ensures the promise was rejected with the 'Invalid delay!'.
 
 ```javascript
 it('should handle invalid delay', () => {
