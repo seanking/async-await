@@ -5,7 +5,7 @@ Over the years developers have used multiple libraries to provide support for pr
 ## Callbacks
 Promises were designed to improve the readability of callbacks by preventing the [pyramid of doom](http://callbackhell.com). They also to reintroduce the idea of _returns_ and _throws_, instead of the execution path being the result of side effects.
 
-The following examples is designed to show to complexity involved with callbacks. The _generateGreeting_ method uses _window.setTimeout_ to create an asynchronous operation. The method takes a _name_, _callback_, and _delay_. In the case that an invalid _delay_ was passed to _generateGreeting_, an Error will be passed to the callback. Otherwise, a greeting will be generated and passed to the callback.   
+The following examples is designed to show to complexity involved with callbacks. The _generateGreeting_ method uses _window.setTimeout_ to create an asynchronous operation. The method takes a _name_, _callback_, and an optional _delay_. In the case that an invalid _delay_ was passed to _generateGreeting_, an Error will be passed to the callback. Otherwise, a greeting will be generated and passed to the callback.   
 
 ```javascript
 function generateGreeting (name, callback, delayMillis) {
