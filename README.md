@@ -5,7 +5,7 @@ Over the years developers have used multiple libraries to introduce support for 
 ## Callbacks
 Most JavaScript developers have experienced the [pyramid of doom](http://callbackhell.com) with callbacks. Having nested callbacks that are a side effect of the previous callback can be hard to read, write, and test.
 
-The following examples is designed to show the complexity involved with callbacks. The _generateGreeting_ method uses [_window.setTimeout_](http://www.w3schools.com/js/js_timing.asp) to create an asynchronous operation. The method takes a _name_, _callback_, and an optional _delay_. In the case that an invalid _delay_ was passed to _generateGreeting_, an Error will be passed to the callback. Otherwise, a greeting will be generated using the _name_ parameter and passed to the callback.   
+The following example is designed to show the complexity involved with callbacks. The _generateGreeting_ method uses [_window.setTimeout_](http://www.w3schools.com/js/js_timing.asp) to create an asynchronous operation. The method takes a _name_, _callback_, and an optional _delay_. In the case that an invalid _delay_ was passed to _generateGreeting_, an Error will be passed to the callback. Otherwise, a greeting will be generated using the _name_ parameter and passed to the callback.   
 
 ```javascript
 function generateGreeting (name, callback, delayMillis) {
@@ -54,7 +54,7 @@ function generateGreeting(name, delay = 1000) {
 ### Successful Promise
 After the asynchronous operation has successfully been completed, the promise's _then_ method will be called with the results of the asynchronous operation.
 
-In the following example, the _generateGreeting_ method is called with 'Foo'. After a delay, a greeting will generated ('Hello Foo!') and pass it to the promise's _then_ method.
+In the following example, the _generateGreeting_ method is called with 'Foo'. After a delay, a greeting will be generated ('Hello Foo!') and pass it to the promise's _then_ method.
 
 ```javascript
 generateGreeting('Foo')
@@ -74,7 +74,7 @@ generateGreeting('Foo', invalidDelay)
 ```
 
 ### Chain Promises
-The Promise API provides the ability to chain promises. The chaining of promises removes the pyramid of doom and reintroduce language fundamentals such as _return_ and _throw_.
+The Promise API provides the ability to chain promises. The chaining of promises removes the pyramid of doom and reintroduces language fundamentals such as _return_ and _throw_.
 
 In the following example, two _generateGreeting_ promises are chained together. Here the result of the first promise ('Hello Foo!') is passed to the next promise to generate a new greeting ('Hello Hello World!!'). After the last promise, the results will be printed to the console.
 
