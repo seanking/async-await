@@ -163,6 +163,3 @@ it('should handle invalid delay', () => {
 It would be hard to come up with a reason not to use promises, instead of callback. Promises are easier to read, write, and test. However, a better way is coming soon. The [Async Functions](https://tc39.github.io/ecmascript-asyncawait/) proposal for ES7 will provide the ability to write asynchronous operations as if the methods were synchronous operations.
 
 ES2015 made promises a first-class feature of the language. [Node](https://nodejs.org/en/) and most of the modern browsers support Promises. Unsurprisingly, Internet Explorer still does not provide support for promises even though the Edge browser does support Promises. If IE or legacy browsers need to be supported, a pollyfill or transpiler such as [Babel](https://babeljs.io) can been used to add support for Promises.
-
-### Code Examples
-The code examples can be found on [GitHub](https://github.com/seanking/es2015-promises). Please feel free to fork and improve the project. Thanks.
