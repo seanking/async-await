@@ -33,9 +33,12 @@ generateGreeting('World', callback, 1501); // prints 'Invalid Delay!'
 ```
 
 ## Promises
-A Promise is an object that represents an operation that has not completed. The _Promise_ constructor takes a _resolve_ callback and _reject_ callback as parameters. The _resolve_ callback is called after a successful completion of the asynchronous operation. The results of the operations will be passed into the callback. The _reject_ callback is called after an error and the error passed into the callback.
+A Promise is an object that represents an operation that has not completed. The sections below will develop a promise and demonstrate how promises can help asynchronous methods behave more like synchronous methods.
+
 
 ### Define Promise
+The _Promise_ constructor takes a _resolve_ callback and _reject_ callback as parameters. The _resolve_ callback is called after a successful completion of the asynchronous operation. The results of the operations will be passed into the callback. The _reject_ callback is called after an error and the error passed into the callback.
+
 
 The _generateGreeting_ method is similar to the previous example, but returns a Promise that wraps the asynchronous operation. After a specified delay, a greeting will be generated and passed to the _resolve_ callback. If an invalid delay is provided, the reject method will be called with an error message.
 
