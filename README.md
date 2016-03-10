@@ -79,7 +79,7 @@ generateGreeting('Foo', invalidDelay)
 ### Chain Promises
 The Promise API provides the ability to chain promises. The chaining of promises removes the pyramid of doom and reintroduces language fundamentals such as _return_ and _throw_.
 
-In the following example, two _generateGreeting_ promises are chained together. Here the result of the first promise ('Hello Foo!') is passed to the next promise to generate a new greeting ('Hello Hello World!!'). After the last promise, the results will be printed to the console.
+In the following example, two _generateGreeting_ promises are chained together. Here the result of the first promise ('Hello Foo!') is passed to the next promise to generate a new greeting ('Hello Hello Foo!!'). After the last promise, the results will be printed to the console.
 
 ```javascript
 generateGreeting('Foo')  // generates 'Hello Foo!'
@@ -129,7 +129,7 @@ describe('ES2015 Promises', () => {
 ```
 
 #### Test a Successful Promise
-The test below verifies that the _generateGreeting_ method will return the expected greeting is 'Hello Foo!''.
+The test below verifies that the _generateGreeting_ method will return the expected greeting 'Hello Foo!''.
 
 It is important to note that the chai assertion returns a promise. This notifies the mocha test framework to wait until the promise under test has been resolved or has been rejected in order to complete the test.
 
