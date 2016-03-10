@@ -131,7 +131,7 @@ describe('ES2015 Promises', () => {
 #### Test a Successful Promise
 The test below verifies that the _generateGreeting_ method will return the expected greeting 'Hello Foo!''.
 
-It is important to note that the chai assertion returns a promise. This notifies the mocha test framework to wait until the promise under test has been resolved or has been rejected in order to complete the test.
+It is important to note that the assertion returns a promise. This notifies the mocha test framework to wait until the promise being tested has been resolved or has been rejected in order to complete the test.
 
 ```javascript
 it('should provide a greeting', () => {
@@ -144,7 +144,7 @@ it('should provide a greeting', () => {
 ```
 
 #### Test a Rejected Promise
-The test below verifies that the _generateGreeting_ method will throw an error for an invalid delay. It is similar the previous test, but it ensures the promise was rejected with the 'Invalid delay!'.
+The test below verifies that the _generateGreeting_ method will throw an error for an invalid delay. It is similar to the previous test, but it ensures the promise was rejected with the 'Invalid delay!'.
 
 ```javascript
 it('should handle invalid delay', () => {
